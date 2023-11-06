@@ -1,57 +1,99 @@
 body
 {
-	background-color : #F08AD6;
+	background-color: black;
 }
-
 main /*conteneur flexbox*/
 {
 	display : grid;
-	grid-template-columns : 1fr 1fr 1fr; /*3 colonnes de même largeur*/
-	width : 55%;
-	margin : auto;
+	grid-template-columns : 1.5fr 1fr 1fr; /*3 colonnes dont la 1ère 2 fois plus large*/
+	width : 60%;
+	margin: auto;
 	gap : 6px;
 }
-
 img[alt="photo de l'auteur"]
 {
 	max-width : 100%;
 	height : auto;
 }
-
+.element{
+	padding: 10px;
+}
 .bresil
 {
 	grid-row : 1/3;
 	margin : auto;
+	padding: 0;
 }
-	
+/*tuile 1/4*/
 .a-propos
 {
-	background-color : black;
-	color : white;
-	padding : 10px;  /*marge intérieure*/
+	background-color : white;
+	color : black;
+	padding : 10px;  
 }
-
+/*tuile 2/4*/
 .portfolio
 {
-	background-color : #E3E3E3;
-	color : black;
+	background-color: black;
+	border: 1px solid white;
+	color : white;
 	padding : 10px;
 }
-
+/*tuile 3/4*/
 .cv
 {
-	background-color : #E3E3E3;
-	color : black;
+	background-color: black;
+	border: 1px solid white;
+	color : white;
 	padding : 10px;	
 }
-
+/*tuile 4/4*/
 .contact
 {
-	background-color : black;
-	color : white; 
+	background-color : white;
+	color : black; 
 	padding : 10px;
 }
+/*Gestion couleur des liens*/
+a{
+	color:white;
+}
+.contact a{
+	color: black;
+}
+.contact a:visited{
+	color: black;
+}
 
-a:visited{
-	color:blue;
+/*Responsive design pour affichage sur smartphone*/
+@media screen and (max-width: 800px){
+	main /*conteneur flexbox*/
+	{	
+		width : 80%;
+		grid-template-columns: 1fr;
+	}
+	/*On doit changer la couleur des tuiles car l'ordre n'est plus le même*/
+	/*tuile 3/4*/
+	.cv
+	{
+		background-color: white;
+		color : black;
+	}
+	/*tuile 4/4*/
+	.contact
+	{
+		background-color : black;
+		border: 1px solid white;
+		color : white; 
+	}
+	/*Gestion couleur des liens*/
+	.cv a{
+		color: black;
+	}
+	.contact a{
+		color: white;
+	}
+	.contact a:visited{
+		color:white;
+	}
 }
