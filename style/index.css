@@ -10,13 +10,18 @@ main /*conteneur flexbox*/
 	margin: auto;
 	gap : 6px;
 }
-img[alt="photo de l'auteur"]
+img[alt="profile picture"]
 {
 	max-width : 100%;
 	height : auto;
 }
-.element{
+.element
+{
 	padding: 10px;
+}
+.element:hover
+{
+	background-color: #B5B5B5;
 }
 .bresil
 {
@@ -24,12 +29,16 @@ img[alt="photo de l'auteur"]
 	margin : auto;
 	padding: 0;
 }
+.contact img
+{
+	width: 20px;
+	filter: brightness(0%);
+}
 /*tuile 1/4*/
 .a-propos
 {
 	background-color : white;
 	color : black;
-	padding : 10px;  
 }
 /*tuile 2/4*/
 .portfolio
@@ -37,7 +46,6 @@ img[alt="photo de l'auteur"]
 	background-color: black;
 	border: 1px solid white;
 	color : white;
-	padding : 10px;
 }
 /*tuile 3/4*/
 .cv
@@ -45,14 +53,12 @@ img[alt="photo de l'auteur"]
 	background-color: black;
 	border: 1px solid white;
 	color : white;
-	padding : 10px;	
 }
 /*tuile 4/4*/
 .contact
 {
 	background-color : white;
 	color : black; 
-	padding : 10px;
 }
 /*Gestion couleur des liens*/
 a{
@@ -85,6 +91,10 @@ a{
 		background-color : black;
 		border: 1px solid white;
 		color : white; 
+	}
+	.contact img
+	{
+		filter: invert(50%);
 	}
 	/*Gestion couleur des liens*/
 	.cv a{
