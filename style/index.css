@@ -75,7 +75,7 @@ a{
 @media screen and (max-width: 800px){
 	main /*conteneur flexbox*/
 	{	
-		width : 80%;
+		width : 90%;
 		grid-template-columns: 1fr;
 	}
 	/*On doit changer la couleur des tuiles car l'ordre n'est plus le même*/
