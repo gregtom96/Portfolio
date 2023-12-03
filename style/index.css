@@ -1,64 +1,67 @@
-body
-{
+body{
 	background-color: black;
 }
-main /*conteneur flexbox*/
-{
+/*conteneur flexbox*/
+main{
 	display : grid;
-	grid-template-columns : 1.5fr 1fr 1fr; /*3 colonnes dont la 1ère 2 fois plus large*/
+	grid-template-columns : 1.5fr 1fr 1fr; /*3 colonnes dont la 1ère 1.5 fois plus large*/
 	width : 60%;
 	margin: auto;
 	gap : 6px;
 }
-img[alt="profile picture"]
-{
-	max-width : 100%;
-	height : auto;
+.title{
+	grid-column: 1/4;
+	color: white;
+	font-family: "Nova Square", sans-serif;
+	font-size: 2em;
+	text-align: center;
+	padding: 0;
 }
-.element
-{
-	padding: 10px;
-}
-.element:hover
-{
-	background-color: #B5B5B5;
-}
-.bresil
-{
-	grid-row : 1/3;
+.bresil{
+	grid-row : 2/4;
 	margin : auto;
 	padding : 0px;
 }
-.contact img
-{
-	width: 20px;
-	filter: brightness(0%);
+img[alt="profile picture"]{
+	max-width : 100%;
+	height : auto;
 }
 /*tuile 1/4*/
-.a-propos
-{
+.a-propos{
+	grid-row-start: 2;
 	background-color : white;
 	color : black;
 }
 /*tuile 2/4*/
-.portfolio
-{
+.portfolio{
+	grid-row-start: 2;
 	background-color: black;
 	border: 1px solid white;
 	color : white;
 }
 /*tuile 3/4*/
-.cv
-{
+.cv{
+	grid-row-start: 3;
 	background-color: black;
 	border: 1px solid white;
 	color : white;
 }
 /*tuile 4/4*/
-.contact
-{
+.contact{
+	grid-row-start: 3;
 	background-color : white;
 	color : black; 
+}
+.contact img{
+	width: 20px;
+	filter: brightness(0%);
+}
+.element{
+	padding: 10px;
+}
+.a-propos:hover, .portfolio:hover, .cv:hover, .contact:hover
+{
+	background-color: #B5B5B5;
 }
 /*Gestion couleur des liens*/
 a{
@@ -73,27 +76,37 @@ a{
 
 /*Responsive design pour affichage sur smartphone*/
 @media screen and (max-width: 800px){
-	main /*conteneur flexbox*/
-	{	
-		width : 90%;
-		grid-template-columns: 1fr;
-	}
 	/*On doit changer la couleur des tuiles car l'ordre n'est plus le même*/
-	/*tuile 3/4*/
-	.cv
-	{
+	/*conteneur flexbox*/
+	main 
+	{	
+		grid-template-columns: 1fr;
+		width : 90%;
+	}
+	.title{
+		grid-column: 1/2;
+	}
+	.bresil{
+		grid-row: 2/3;
+	}
+	.a-propos{
+		grid-row-start: 3;
+	}
+	.portfolio{
+		grid-row-start: 4;
+	}
+	.cv{
+		grid-row-start: 5;
 		background-color: white;
 		color : black;
 	}
-	/*tuile 4/4*/
-	.contact
-	{
+	.contact{
+		grid-row-start: 6;
 		background-color : black;
 		border: 1px solid white;
 		color : white; 
 	}
-	.contact img
-	{
+	.contact img{
 		filter: invert(50%);
 	}
 	/*Gestion couleur des liens*/
