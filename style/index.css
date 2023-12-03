@@ -25,6 +25,7 @@ main{
 img[alt="profile picture"]{
 	max-width : 100%;
 	height : auto;
+	border: 1px solid white;
 }
 /*tuile 1/4*/
 .a-propos{
