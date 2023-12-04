@@ -1,11 +1,11 @@
 body{
 	background-color: black;
-	animation: pageLoad 0.75s ease-out;
+	animation: pageLoad 1s ease-out;
 }
 @keyframes pageLoad{
 	from{
 		opacity: 0;
-		transform: rotateX(-20deg);
+		transform: rotateX(-30deg);
 	}
 	to{
 		opacity: 1;
@@ -83,8 +83,7 @@ img[alt="profile picture"]:hover{
 	width: 20px;
 	filter: brightness(0%);
 }
-.a-propos:hover, .portfolio:hover, .cv:hover, .contact:hover
-{
+.a-propos:hover, .portfolio:hover, .cv:hover, .contact:hover{
 	background-color: #B5B5B5;
 }
 /*Gestion couleur des liens*/
@@ -102,8 +101,7 @@ a{
 @media screen and (max-width: 800px){
 	/*On doit changer la couleur des tuiles car l'ordre n'est plus le même*/
 	/*conteneur flexbox*/
-	main 
-	{	
+	main {	
 		grid-template-columns: 1fr;
 		width : 90%;
 	}
