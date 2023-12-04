@@ -26,25 +26,24 @@ main{
 	font-size: 2em;
 	text-align: center;
 	color: #696969;
-	transition: all 0.5s;
+	transition: all 0.2s;
 }
 .title:hover{
 	letter-spacing: 1px;
 	color: white;
-	text-shadow: 0 0 10px white;
+	text-shadow: 0 0 5px white;
 }
 .bresil{
 	grid-row : 2/4;
 	margin: auto;
 	border: 1px solid white;
-	overflow: hidden; /*utile pour effet zoom*/
-	position: relative; /*utile pour effet zoom*/
+	overflow: hidden;
 	padding: 0;
 }
 img[alt="profile picture"]{
 	width : 100%;
 	height: auto;
-	transition: all 0.5s;
+	transition: all 0.3s;
 }
 img[alt="profile picture"]:hover{
 	transform: scale(1.1);
