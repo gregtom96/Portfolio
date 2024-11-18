@@ -71,6 +71,18 @@ img[alt="profile picture"]:hover{
 	color : white;
 	padding: 10px;
 }
+.link-open-cv {
+	cursor: pointer;
+}
+.link-open-cv:hover {
+	text-decoration: underline;
+}
+.link-download-cv {
+	text-decoration: none;
+}
+.link-download-cv:hover {
+	text-decoration: underline;
+}
 /*tuile 4/4*/
 .contact{
 	grid-row-start: 3;
