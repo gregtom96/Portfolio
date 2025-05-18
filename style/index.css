@@ -97,7 +97,7 @@ ul.custom-list li::before{
 	filter: brightness(0%);
 }
 .a-propos:hover, .portfolio:hover, .cv:hover, .contact:hover{
-	background-color: #454545;
+	background-color: #5a5a5a;
 }
 /*Gestion couleur des liens*/
 a{
