@@ -1,11 +1,11 @@
 body{
-	background-color: black;
-	animation: pageLoad 0.75s ease-out;
+	background-color: rgb(30, 30, 30);
+	animation: pageLoad 1s ease-out;
 }
 @keyframes pageLoad{
 	from{
 		opacity: 0;
-		transform: rotateX(-20deg);
+		transform: rotateX(-40deg);
 	}
 	to{
 		opacity: 1;
@@ -22,10 +22,10 @@ main{
 }
 .title{
 	grid-column: 1/4;
-	font-family: "Permanent Marker", sans-serif;
+	font-family: "Orbitron", sans-serif;
 	font-size: 2em;
 	text-align: center;
-	color: #696969;
+	color: #808080;
 	transition: all 0.1s;
 }
 .title:hover{
@@ -36,7 +36,7 @@ main{
 .bresil{
 	grid-row : 2/4;
 	margin: auto;
-	border: 1px solid white;
+	border: 1px solid rgb(200, 200, 200);
 	overflow: hidden;
 	padding: 0;
 }
@@ -51,31 +51,33 @@ img[alt="profile picture"]:hover{
 /*tuile 1/4*/
 .a-propos{
 	grid-row-start: 2;
-	background-color : white;
-	color : black;
-	padding: 10px;
+	background-color : rgb(200, 200, 200);
+	color : rgb(30, 30, 30);
+	padding: 15px;
 }
 /*tuile 2/4*/
 .portfolio{
 	grid-row-start: 2;
-	background-color: black;
-	border: 1px solid white;
-	color : white;
-	padding: 10px;
+	background-color: rgb(30, 30, 30);
+	border: 1px solid rgb(200, 200, 200);
+	color : rgb(200, 200, 200);
+	padding: 15px;
 }
+.custom-list{
+	list-style: none;         /* supprime les puces par défaut */
+	padding-left: 0;          /* supprime l’indentation */
+}
+ul.custom-list li::before{
+	content: "👉";
+	margin-right: 10px;
+}   
 /*tuile 3/4*/
 .cv{
 	grid-row-start: 3;
-	background-color: black;
-	border: 1px solid white;
-	color : white;
-	padding: 10px;
-}
-.link-open-cv {
-	cursor: pointer;
-}
-.link-open-cv:hover {
-	text-decoration: underline;
+	background-color: rgb(30, 30, 30);
+	border: 1px solid rgb(200, 200, 200);
+	color : rgb(200, 200, 200);
+	padding: 15px;
 }
 .link-download-cv {
 	text-decoration: none;
@@ -86,27 +88,27 @@ img[alt="profile picture"]:hover{
 /*tuile 4/4*/
 .contact{
 	grid-row-start: 3;
-	background-color : white;
-	color : black; 
-	padding: 10px;
+	background-color : rgb(200, 200, 200);
+	color : rgb(30, 30, 30); 
+	padding: 15px;
 }
 .contact img{
 	width: 20px;
 	filter: brightness(0%);
 }
 .a-propos:hover, .portfolio:hover, .cv:hover, .contact:hover{
-	background-color: #B5B5B5;
+	background-color: #454545;
 }
 /*Gestion couleur des liens*/
 a{
-	color:white;
+	color:rgb(200, 200, 200);
+	text-decoration: none;
 }
-.contact a{
-	color: black;
-}
-.contact a:visited{
-	color: black;
-}
+a:hover {
+	color: #ff9800;
+	text-decoration: underline;
+	transition: 0.3s;
+}  
 
 /*Responsive design pour affichage sur smartphone*/
 @media screen and (max-width: 800px){
@@ -128,28 +130,30 @@ a{
 	.portfolio{
 		grid-row-start: 4;
 	}
+	.portfolio a{
+		color: rgb(200, 200, 200);
+	}
 	.cv{
 		grid-row-start: 5;
-		background-color: white;
-		color : black;
+		background-color: rgb(200, 200, 200);
+		color : rgb(30, 30, 30);
+	}
+	.cv a{
+		color: rgb(30, 30, 30);
 	}
 	.contact{
 		grid-row-start: 6;
-		background-color : black;
-		border: 1px solid white;
-		color : white; 
+		background-color : rgb(30, 30, 30);
+		border: 1px solid rgb(200, 200, 200);
+		color : rgb(200, 200, 200); 
 	}
 	.contact img{
 		filter: invert(50%);
 	}
 	/*Gestion couleur des liens*/
-	.cv a{
-		color: black;
-	}
-	.contact a{
-		color: white;
-	}
-	.contact a:visited{
-		color:white;
-	}
+	a:hover{
+		color: #ff9800;
+		text-decoration: underline;
+		transition: 0.3s;
+	}  
 }
